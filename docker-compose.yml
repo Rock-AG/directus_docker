@@ -83,4 +83,4 @@ networks:
     web:
         driver: bridge
     caddy:
-        external: "true"
+        external: true
