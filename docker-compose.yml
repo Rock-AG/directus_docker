@@ -55,7 +55,7 @@ services:
 
         labels:
             caddy: directus.rockag.net
-            caddy.reverse_proxy: "{{upstreams 80}}"
+            caddy.reverse_proxy: "{{upstreams 8055}}"
 
         environment:
             SECRET: ${DIRECTUS_SECRET}
