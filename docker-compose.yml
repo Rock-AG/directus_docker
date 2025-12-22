@@ -86,6 +86,12 @@ services:
 
             PUBLIC_URL: ${PUBLIC_URL}
 
+            EMAIL_TRANSPORT: ${EMAIL_TRANSPORT}
+            EMAIL_SMTP_HOST: ${EMAIL_SMTP_HOST}
+            EMAIL_SMTP_PORT: ${EMAIL_SMTP_PORT}
+            EMAIL_SMTP_USER: ${EMAIL_SMTP_USER}
+            EMAIL_SMTP_PASSWORD: ${EMAIL_SMTP_PASSWORD}
+
 networks:
     web:
         driver: bridge
