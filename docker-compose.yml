@@ -58,6 +58,7 @@ services:
         networks:
             - caddy
             - web
+            - smtp
 
         labels:
             caddy: directus.rockag.net
@@ -89,4 +90,6 @@ networks:
     web:
         driver: bridge
     caddy:
+        external: true
+    smtp:
         external: true
