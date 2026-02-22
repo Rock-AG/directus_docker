@@ -58,6 +58,7 @@ services:
         networks:
             - caddy
             - web
+            - smtp
 
         labels:
             caddy: directus.rockag.net
@@ -86,9 +87,18 @@ services:
             PUBLIC_URL: ${PUBLIC_URL}
 
             CORS_ORIGIN: ${CORS_ORIGIN}
+            
+            EMAIL_TRANSPORT: ${EMAIL_TRANSPORT}
+            EMAIL_SMTP_HOST: ${EMAIL_SMTP_HOST}
+            EMAIL_SMTP_PORT: ${EMAIL_SMTP_PORT}
+            EMAIL_SMTP_USER: ${EMAIL_SMTP_USER}
+            EMAIL_SMTP_PASSWORD: ${EMAIL_SMTP_PASSWORD}
+            EMAIL_FROM: ${EMAIL_FROM}
 
 networks:
     web:
         driver: bridge
     caddy:
+        external: true
+    smtp:
         external: true
