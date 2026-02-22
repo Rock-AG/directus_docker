@@ -85,6 +85,8 @@ services:
 
             PUBLIC_URL: ${PUBLIC_URL}
 
+            CORS_ORIGIN: ${CORS_ORIGIN}
+
 networks:
     web:
         driver: bridge
